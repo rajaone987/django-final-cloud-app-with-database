@@ -150,7 +150,7 @@ def show_exam_result(request, course_id, submission_id):
         if choice.is_correct == True:
             points = points + 1;
     grade = points//total;
-    final_return = {'course':course, 'selected ids':selected_choices, 'grade':grade}
+    final_return = {'course':course, 'selected_ids':selected_choices, 'grade':grade}
     
     return render(request, 'onlinecourse/exam_result_bootstrap.html', final_return)
     
